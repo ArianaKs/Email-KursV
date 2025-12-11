@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "KursV.Controllers.ExchangeController",
+    "Method": "GetAllRates",
+    "RelativePath": "api/Exchange",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KursV.Controllers.ExchangeController",
+    "Method": "AddRate",
+    "RelativePath": "api/Exchange",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "KursV.Models.AddRateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KursV.Controllers.ExchangeController",
+    "Method": "GetRate",
+    "RelativePath": "api/Exchange/{currencyCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "currencyCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KursV.Controllers.ExchangeController",
+    "Method": "UpdateRate",
+    "RelativePath": "api/Exchange/{currencyCode}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "currencyCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "newRate",
+        "Type": "System.Decimal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

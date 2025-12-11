@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "..\\..\\..\\..\\..\\KursV-master\\KursV\\KursV.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\..\\..\\..\\..\\EmailSenderAPI-main\\EmailSenderAPI\\EmailSenderAPI\\EmailSenderAPI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

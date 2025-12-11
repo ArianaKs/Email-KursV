@@ -1,0 +1,136 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "KursV",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Exchange": {
+      "get": {
+        "tags": [
+          "Exchange"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Exchange"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Exchange/{currencyCode}": {
+      "get": {
+        "tags": [
+          "Exchange"
+        ],
+        "parameters": [
+          {
+            "name": "currencyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Exchange"
+        ],
+        "parameters": [
+          {
+            "name": "currencyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "number",
+                "format": "double"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddRateRequest": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "currencyName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
